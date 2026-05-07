@@ -26,10 +26,10 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 
 ## Endpoints de la API
 
-### Productos
+### Productos 🎮
 - GET `/productos`
 
-### Carrito
+### Carrito 🛒
 - GET `/carrito`
 - POST `/carrito/agregar`
 - DELETE `/carrito/eliminar/<id>`
@@ -45,14 +45,16 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 
 ```bash
 python app.py
+```
 
 ---
 
 ## Tests
 
 Ejecutar tests con:
+```bash
 pytest
-
+```
 ---
 
 ## Documentación
