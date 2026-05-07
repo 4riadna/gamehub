@@ -12,10 +12,8 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 - Flask
 - Pytest
 - Flasgger (Swagger)
-- Git / GitHub
 
 ---
-
 ## Funcionalidades principales
 
 - Listar productos disponibles
@@ -30,7 +28,6 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 
 ### Productos
 - GET `/productos`
-- GET `/productos?genero=indie`
 
 ### Carrito
 - GET `/carrito`
@@ -42,10 +39,11 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 
 ## Ejecución del proyecto
 
-Instalar dependencias:
-pip install -r requirements.txt
+1. Activar el entorno virtual
 
-Ejecutar la aplicación:
+2. Ejecutar la aplicación:
+
+```bash
 python app.py
 
 ---
