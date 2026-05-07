@@ -1,16 +1,10 @@
+from productos import productos
 from flask import Flask, jsonify, request
 from flask import jsonify
 from flasgger import Swagger
 
 app = Flask(__name__)
 Swagger(app)
-
-productos = [
-    {"id": 1, "nombre": "Hollow Knight", "precio": 4000, "genero": "indie"},
-    {"id": 2, "nombre": "FIFA 24", "precio": 10000, "genero": "deportes"},
-    {"id": 3, "nombre": "Call of Duty", "precio": 12000, "genero": "accion"},
-    {"id": 4, "nombre": "Minecraft", "precio": 8000, "genero": "sandbox"}
-]
 
 carrito = []
 
