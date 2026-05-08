@@ -1,0 +1,136 @@
+swagger: "2.0"
+
+info:
+  title: GameHub API
+  version: "1.0"
+  description: API REST para gestionar productos y carrito de compras de videojuegos.
+
+host: 127.0.0.1:5000
+basePath: /
+
+schemes:
+  - http
+
+tags:
+  - name: Productos
+  - name: Carrito
+
+paths:
+
+  /productos:
+    get:
+      tags:
+        - Productos
+
+      summary: Obtener productos disponibles
+
+      responses:
+        200:
+          description: Lista de productos
+
+          schema:
+            type: array
+
+            items:
+              $ref: "#/definitions/Producto"
+
+  /carrito:
+    get:
+      tags:
+        - Carrito
+
+      summary: Ver productos del carrito
+
+      responses:
+        200:
+          description: Productos agregados al carrito
+
+          schema:
+            type: array
+
+            items:
+              $ref: "#/definitions/Producto"
+
+  /carrito/agregar:
+    post:
+      tags:
+        - Carrito
+
+      summary: Agregar producto al carrito
+
+      parameters:
+        - in: body
+          name: body
+
+          schema:
+            type: object
+
+            properties:
+              id:
+                type: integer
+                example: 1
+
+      responses:
+        200:
+          description: Producto agregado correctamente
+
+        404:
+          description: Producto no encontrado
+
+  /carrito/eliminar/{id}:
+    delete:
+      tags:
+        - Carrito
+
+      summary: Eliminar producto del carrito
+
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+
+      responses:
+        200:
+          description: Producto eliminado correctamente
+
+  /carrito/total:
+    get:
+      tags:
+        - Carrito
+
+      summary: Obtener total del carrito
+
+      responses:
+        200:
+          description: Total calculado
+
+          schema:
+            type: object
+
+            properties:
+              total:
+                type: number
+                example: 16000
+
+definitions:
+
+  Producto:
+    type: object
+
+    properties:
+      id:
+        type: integer
+        example: 1
+
+      nombre:
+        type: string
+        example: Devil May Cry 5
+
+      precio:
+        type: number
+        example: 4000
+
+      genero:
+        type: string
+        example: accion

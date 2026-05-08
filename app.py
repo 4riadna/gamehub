@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flasgger import Swagger
 
 app = Flask(__name__)
-Swagger(app)
+Swagger(app, template_file='swagger.yaml')
 
 carrito = []
 
