@@ -17,7 +17,6 @@ La aplicación permite gestionar productos, agregarlos al carrito y calcular el 
 ## Funcionalidades principales
 
 - Listar productos disponibles
-- Filtrar productos por género
 - Agregar productos al carrito
 - Eliminar productos del carrito
 - Calcular el total de la compra
