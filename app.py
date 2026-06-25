@@ -83,8 +83,8 @@ def eliminar_carrito(id):
     conn.execute("""
         UPDATE carrito
         SET fh_baja = CURRENT_TIMESTAMP
-        WHERE videojuego_id = ?
-          AND fh_baja IS NULL
+        WHERE id = ?
+        AND fh_baja IS NULL
     """, (id,))
 
     conn.commit()
