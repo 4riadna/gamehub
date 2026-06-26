@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 from flasgger import Swagger
 from database import get_connection
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 Swagger(app, template_file='swagger.yaml')
 
 @app.route('/')

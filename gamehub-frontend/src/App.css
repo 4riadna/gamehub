@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #1d1f27, #111217);
+    color: white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+h1 {
+  text-align: center;
+  color: #a02ae4;
+}
+
+h2 {
+  color: #d252f1;
+}
+
+.juegos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+
+    margin-top:30px;
+}
+
+.card{
+    background:#27293d;
+    width:260px;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.5);
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#6c5ce7;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+button:hover{
+    background:#7d6df5;
+}
+
+.carrito{
+  margin-top:60px;
+  padding:25px;
+  border-radius:15px;
+  background:#27293d;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+.item-carrito{
+  background:#32344b;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+.total {
+  text-align:right;
+  font-size:30px;
+  color:#61ff8b;
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:18px;
+    background:#222435;
+    border-bottom:2px solid #6c5ce7;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:#6c5ce7;
+}
+
+.hero{
+  margin-top:30px;
+  padding:70px 30px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#6c5ce7,#4b3ca7,#1d1f27);
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.hero-content h1{
+  font-size:64px;
+  margin:0;
+  letter-spacing:2px;
+}
+
+.hero-content p{
+  margin-top:20px;
+  font-size:20px;
+  color:#ececec;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+}
+
+.mensaje {
+  background-color: #8b1e1e;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight:bold;
+  text-align: center;
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.agregado {
+  background-color: #28a745 !important;
+  cursor: default;
+}
